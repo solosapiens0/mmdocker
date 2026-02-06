@@ -1,0 +1,40 @@
+# Elasticsearch Configuration
+# Bu dosya opsiyonel - docker-compose.yml'deki environment değişkenleri önceliklidir
+
+# Cluster
+# cluster.name: docker-cluster
+# node.name: node-1
+
+# Network
+network.host: 0.0.0.0
+http.port: 9200
+transport.port: 9300
+
+# Discovery
+# discovery.type: single-node
+
+# Memory
+bootstrap.memory_lock: true
+
+# Security (docker-compose.yml'de yönetiliyor)
+# xpack.security.enabled: true
+# xpack.security.http.ssl.enabled: false
+# xpack.security.transport.ssl.enabled: false
+
+# Monitoring
+xpack.monitoring.collection.enabled: true
+
+# Performance
+indices.memory.index_buffer_size: 20%
+indices.queries.cache.size: 10%
+
+# Thread pools
+thread_pool.write.queue_size: 500
+thread_pool.search.queue_size: 1000
+
+# Index defaults
+action.auto_create_index: true
+action.destructive_requires_name: true
+
+# Logging
+logger.level: INFO

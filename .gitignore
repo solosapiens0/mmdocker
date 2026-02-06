@@ -1,0 +1,26 @@
+# Environment dosyası - Şifreler burada!
+.env
+
+# Data dizinleri - Veritabanı dosyaları
+data/
+!data/.gitkeep
+
+# Log dosyaları
+logs/
+*.log
+
+# Geçici dosyalar
+tmp/
+temp/
+
+# IDE ayarları
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Docker volume data
+*.pid
