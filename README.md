@@ -13,7 +13,7 @@ sudo mkdir -p /opt/proje1
 cd /opt/proje1
 
 cp -r ../compose-template/* .
-cp ../compose-template/.env.example .env .
+cp ../compose-template/.env.example .env
 
 ```
 
