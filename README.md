@@ -12,8 +12,9 @@ sudo mkdir -p /opt/proje1
 sudo cp -r . /opt/proje1/
 cd /opt/proje1
 
-# Environment dosyasını hazırla
-cp .env.example .env
+cp -r ../compose-template/* .
+cp ../.env.example .env .
+
 ```
 
 ### 2. Ayarları Düzenle
@@ -63,16 +64,16 @@ docker compose --profile postgres up -d
 docker compose --profile postgres --profile redis up -d
 
 # Servisleri durdur
-docker compose down
+docker compose -p projeadi down
 
 # Servisleri durdur ve volume'leri sil (DİKKAT: Data kaybolur!)
-docker compose down -v
+docker compose -p -projeadi down -v
 
 # Servisleri yeniden başlat
-docker compose restart
+docker compose -p projeadi restart
 
 # Belirli servisi yeniden başlat
-docker compose restart postgres
+docker compose -p projeadi restart postgres
 ```
 
 ### Log İzleme
