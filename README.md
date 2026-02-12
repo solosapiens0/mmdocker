@@ -9,7 +9,7 @@ Production-ready, modüler Docker Compose sistemi. PostgreSQL, Redis, RabbitMQ v
 ```bash
 # Yeni proje oluştur
 sudo mkdir -p /opt/proje1
-sudo cp -r . /opt/proje1/
+
 cd /opt/proje1
 
 cp -r ../compose-template/* .
